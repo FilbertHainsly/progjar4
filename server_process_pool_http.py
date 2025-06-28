@@ -69,7 +69,7 @@ def Server():
 	my_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	my_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
-	my_socket.bind(('0.0.0.0', 8000))
+	my_socket.bind(('0.0.0.0', 8889))
 	my_socket.listen(1)
 
 	with ProcessPoolExecutor(20) as executor:
