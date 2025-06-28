@@ -10,7 +10,7 @@ import base64
 server_address = ('172.16.16.101', 8889)
 
 
-def make_socket(destination_address='localhost', port=8000):
+def make_socket(destination_address='localhost', port=8889):
     try:
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.settimeout(120)
@@ -20,7 +20,7 @@ def make_socket(destination_address='localhost', port=8000):
         logging.warning(f"error {str(ee)}")
 
 
-def make_secure_socket(destination_address='localhost', port=8000):
+def make_secure_socket(destination_address='localhost', port=8889):
     try:
         context = ssl.create_default_context()
         context.check_hostname = False
